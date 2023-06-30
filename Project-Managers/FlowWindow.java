@@ -21,7 +21,16 @@ public class FlowWindow extends JFrame {
         super.setTitle("Flow Layout");
         super.setSize(WINDOW_WIDTH,WINDOW_LENGTH);
         super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        super.setLayout(new FlowLayout(FlowLayout.CENTER));
+        //alignment
+        super.setLayout(new FlowLayout(FlowLayout.CENTER,20,10));
+
+        /*
+        The FlowLayout manager inserts a gap of five pixels between components, both
+        horizontally and vertically. You can adjust this gap by passing values for the horizontal and
+        vertical gaps as arguments to an overloaded FlowLayout constructor. The constructor has
+        the following format:
+        FlowLayout(int alignment, int horizontalGap, int verticalGap)
+         */
 
         this.button1 = new JButton("Button 1");
         this.button2 = new JButton("Button 2");
