@@ -10,8 +10,8 @@ import java.awt.event.*;
 import java.awt.*;
 
 public class FlowWindow extends JFrame {
-    private final int WINDOW_WIDTH = 200;
-    private final int WINDOW_LENGTH = 100;
+    private final int WINDOW_WIDTH = 500;
+    private final int WINDOW_LENGTH = 300;
     private JButton button1;
     private JButton button2;
     private JButton button3;
@@ -21,7 +21,7 @@ public class FlowWindow extends JFrame {
         super.setTitle("Flow Layout");
         super.setSize(WINDOW_WIDTH,WINDOW_LENGTH);
         super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        super.setLayout(new FlowLayout());
+        super.setLayout(new FlowLayout(FlowLayout.CENTER));
 
         this.button1 = new JButton("Button 1");
         this.button2 = new JButton("Button 2");
