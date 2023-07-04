@@ -22,8 +22,8 @@ public class ColorCheckBoxWindow extends JFrame {
 
     public void buildOperations(){
         this.label = new JLabel("Select checkbox to change color");
-        this.yellowCheckbox = new JCheckBox("Yellow Checkbox");
-        this.redCheckbox = new JCheckBox("Red Checkbox");
+        this.yellowCheckbox = new JCheckBox("Yellow Background");
+        this.redCheckbox = new JCheckBox("Red Text");
 
         yellowCheckbox.addItemListener(new CheckBoxListener());
         redCheckbox.addItemListener(new CheckBoxListener());
@@ -39,25 +39,27 @@ public class ColorCheckBoxWindow extends JFrame {
             if(e.getSource() == yellowCheckbox){
                 if(yellowCheckbox.isSelected()) {
                     getContentPane().setBackground(Color.YELLOW);
-                    yellowCheckbox.setForeground(Color.YELLOW);
-                    redCheckbox.setForeground(Color.YELLOW);
+                    yellowCheckbox.setBackground(Color.YELLOW);
+                    redCheckbox.setBackground(Color.YELLOW);
                 }
                 else {
                     getContentPane().setBackground(Color.lightGray);
-                    yellowCheckbox.setForeground(Color.lightGray);
-                    redCheckbox.setForeground(Color.lightGray);
+                    yellowCheckbox.setBackground(Color.lightGray);
+                    redCheckbox.setBackground(Color.lightGray);
                 }
             }
             else if(e.getSource() == redCheckbox){
                 if(redCheckbox.isSelected()) {
-                    getContentPane().setBackground(Color.RED);
+                    getContentPane().setForeground(Color.RED);
+                    label.setForeground(Color.RED);
                     yellowCheckbox.setForeground(Color.RED);
                     redCheckbox.setForeground(Color.RED);
                 }
                 else{
-                    getContentPane().setBackground(Color.lightGray);
-                    yellowCheckbox.setForeground(Color.lightGray);
-                    redCheckbox.setForeground(Color.lightGray);
+                    getContentPane().setForeground(Color.BLACK);
+                    label.setForeground(Color.BLACK);
+                    yellowCheckbox.setForeground(Color.BLACK);
+                    redCheckbox.setForeground(Color.BLACK);
                 }
             }
         }
